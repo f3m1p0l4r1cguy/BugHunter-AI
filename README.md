@@ -1,75 +1,75 @@
-# 🚀 CYBERPUNK AI PENTEST AGENT 2077
+# 🚀 BUGHUNTER AI PENTEST AGENT
 
-**Agente automatizado de pentest com UI “cyberpunk”, gerenciamento de fila sensível a recursos e integração com IA.**
-
----
-
-## 🔎 Descrição curta
-Ferramenta de automação de testes de penetração com GUI, gerenciamento de fila baseado em recursos e análise assistida por IA. Ideal para laboratórios e testes autorizados.
+**Automated penetration testing agent with a cyber-inspired GUI, resource-aware task scheduling, and AI-assisted analysis.**
 
 ---
 
-## ⚠️ Aviso de segurança / legal
-**Somente use em sistemas que você possui ou tem permissão explícita para testar.** Varreduras sem autorização são ilegais. O script pode executar ferramentas intrusivas e enviar dados para uma API externa (configurável). Revise o código e as chaves de API antes de rodar.
+## 🔎 Short description
+Automation tool for penetration testing with a GUI, resource-aware task queueing, and AI-assisted analysis. Designed for labs and authorized testing only.
 
 ---
 
-## 🧰 Principais recursos
-- Gerenciamento de fila sensível a recursos (CPU / RAM) com limites configuráveis.  
-- Perfis de recursos por ferramenta (estimativa de CPU/RAM/tempo).  
-- GUI em **tkinter** com tema "cyberpunk" (monitor de recursos, fila, console).  
-- Integração com um serviço de IA para analisar relatórios e sugerir comandos/ações.  
-- Geração de relatórios por rodada e extração automática de CVEs.
+## ⚠️ Security / Legal Notice
+**Use only on systems you own or have explicit permission to test.** Unauthorized scanning is illegal. This script can run intrusive tools and may send reports to an external API (configurable). Review the code and API keys before running.
 
 ---
 
-## 📦 Requisitos
-- Python 3.7+ (recomendado 3.9+)  
-- `psutil`, `requests` e `tkinter` (ver `install_dependencies.py`).  
-- Ferramentas externas opcionais (para funcionalidades completas): `nmap`, `sqlmap`, `nikto`, `nuclei`, `masscan`, `hydra`, `metasploit`, etc. (instale via apt / pacman / brew conforme sua distro).
+## 🧰 Key Features
+- Resource-aware task queueing (CPU / RAM) with configurable limits.  
+- Tool resource profiles (estimated CPU/RAM/time consumption).  
+- GUI built with **tkinter** featuring a "cyberpunk" theme (resource monitor, queue, console).  
+- Integration with an AI service to analyze reports and suggest commands/actions.  
+- Per-round report generation and automated CVE extraction.
 
 ---
 
-## 🚀 Instalação rápida
+## 📦 Requirements
+- Python 3.7+ (3.9+ recommended)  
+- `psutil`, `requests`, and `tkinter` (see `install_dependencies.py`).  
+- Optional external pentesting tools for full functionality: `nmap`, `sqlmap`, `nikto`, `nuclei`, `masscan`, `hydra`, `metasploit`, etc. Install via your distro package manager.
 
-1. Clone o repositório:
+---
+
+## 🚀 Quick Installation
+
+1. Clone the repository:
 ```bash
-git clone <SEU_REPO_URL>
-cd <SEU_REPO_DIR>
+git clone https://github.com/ARESHAmohanad/BugHunter-AI
+cd BugHunter-AI
 ```
 
-2. Instale dependências Python (script incluído):
+2. Install Python dependencies (included script):
 ```bash
 python3 install_dependencies.py
 ```
-(este script verifica e instala `psutil` e `requests`; `tkinter` pode precisar ser instalado via pacote do sistema).
+(This script checks and installs `psutil` and `requests`. `tkinter` may need to be installed via system packages.)
 
-3. (Opcional) Instale ferramentas de pentest do sistema:
+3. (Optional) Install system pentest tools:
 ```bash
-# Exemplo Debian/Ubuntu
+# Example on Debian/Ubuntu
 sudo apt update
 sudo apt install -y nmap sqlmap nikto masscan
 ```
 
 ---
 
-## ▶️ Quick start (execução)
-Siga o guia rápido no arquivo `QUICK_START.md` ou rode:
+## ▶️ Quick start (run)
+See `QUICK_START.md` for a visual walkthrough or run:
 ```bash
 python3 AIlinuxV2.py
 ```
-Depois, insira o alvo (use apenas alvos autorizados), ajuste `Max Concurrent Tools`, thresholds de CPU/RAM e clique em **INITIATE SCAN** na GUI.
+Enter the target (authorized targets only), adjust `Max Concurrent Tools`, CPU/RAM thresholds, and click **INITIATE SCAN** in the GUI.
 
 ---
 
-## ⚙️ Configurações importantes
-- Configure as chaves de API (se for usar a integração IA) no topo do `AIlinuxV2.py`: `API_KEYS` e `API_URL`. A integração envia relatórios para um endpoint externo — revise a política de privacidade antes de enviar dados sensíveis.  
-- Ajuste `Max Concurrent Tools`, `CPU Threshold` e `RAM Threshold` na interface para proteger seu sistema de sobrecarga.
+## ⚙️ Important Configuration
+- Configure API keys (if using AI integration) at the top of `AIlinuxV2.py`: `API_KEYS` and `API_URL`. The integration can send reports to an external endpoint — review privacy implications before sending sensitive data.  
+- Adjust `Max Concurrent Tools`, `CPU Threshold`, and `RAM Threshold` in the GUI to avoid overloading your host.
 
 ---
 
-## 🗂️ Estrutura de saída (exemplo)
-Cada sessão gera uma pasta `AI_Pentest_YYYYMMDD_HHMMSS_<id>/` com subpastas por rodada:
+## 🗂️ Output structure (example)
+Each session produces a directory `AI_Pentest_YYYYMMDD_HHMMSS_<id>/` with per-round subfolders:
 ```
 AI_Pentest_YYYYMMDD_HHMMSS_ID/
 ├─ round_1/
@@ -81,36 +81,36 @@ AI_Pentest_YYYYMMDD_HHMMSS_ID/
 ├─ errors.log
 └─ final_report.json
 ```
-Os relatórios e decisões são usados pela IA para determinar próximos passos.
+Reports and decisions are used by the AI engine to determine next steps.
 
 ---
 
-## 🛠️ Como funciona (resumo técnico)
-1. Usuário inicia scan e adiciona ferramentas à fila.  
-2. `ResourceMonitor` verifica CPU/RAM e permite execução apenas quando seguro.  
-3. `ToolQueueManager` gerencia execução concorrente (1–3 ferramentas).  
-4. Saídas são agregadas em `report.json`.  
-5. Resultado é enviado ao motor IA (se configurado); a IA retorna comandos no formato `<COMMANDS>` e um JSON `<DECISION>` com próximas ferramentas.
+## 🛠️ How it works (technical summary)
+1. User starts a scan and enqueues tools.  
+2. `ResourceMonitor` checks CPU/RAM and permits execution only when safe.  
+3. `ToolQueueManager` manages concurrent execution (configurable).  
+4. Outputs are aggregated into `report.json`.  
+5. The aggregated results are optionally sent to the AI engine; the AI returns commands inside `<COMMANDS>` and a `<DECISION>` JSON that lists next tools.
 
 ---
 
-## 📚 Leituras / documentação adicional
-- `QUICK_START.md` — passo a passo visual e exemplos.  
-- `OPTIMIZATION_SUMMARY.md` — resumo das otimizações de uso de recursos (filas, perfis, monitor).
+## 📚 Documentation
+- `QUICK_START.md` — quick walkthrough and examples.  
+- `OPTIMIZATION_SUMMARY.md` — summary of resource-usage optimizations (queueing, profiles, monitor).
 
 ---
 
-## 🤝 Contribuição
-Contribuições são bem-vindas. Sugestões:
-- Adicionar novos perfis de ferramenta
-- Melhorar validação de comandos retornados pela IA
-- Suporte a contêiner/Docker para execução isolada
+## 🤝 Contributing
+Contributions welcome. Ideas:
+- Add new tool resource profiles
+- Improve AI response validation and command sanitization
+- Add Docker/container support for isolated execution
 
 ---
 
-## 🧾 Licença
-Uso educacional / testes autorizados. Inclua aqui a sua licença (MIT, Apache-2.0, etc.) conforme desejar.
+## 🧾 License
+For educational use / authorized testing. Add a license file (MIT, Apache-2.0, etc.) as desired.
 
 ---
 
-**OBS:** revise o código antes de execução em ambiente de produção. Para uso seguro, rode dentro de VM isolada e contra laboratórios/CTFs autorizados.
+**NOTE:** Review the code before running in any production environment. For safe usage, run inside an isolated VM against authorized labs or CTFs.
