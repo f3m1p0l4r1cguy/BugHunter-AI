@@ -1,5 +1,7 @@
 # 🚀 BUGHUNTER AI PENTEST AGENT
 
+![Logo](https://github.com/ARESHAmohanad/BugHunter-AI/blob/main/IMG_20251013_144744_076.jpg?raw=true)
+
 **Automated penetration testing agent with a cyber-inspired GUI, resource-aware task scheduling, and AI-assisted analysis.**
 
 ---
